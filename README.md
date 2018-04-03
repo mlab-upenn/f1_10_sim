@@ -9,14 +9,13 @@ Instructions
 * Create your workspace folder. If you are comfortable with Linux, create this in whatever location you desire and name it appropriately, but following this tutorial verbatim will minimize your chance of error.
   ```sh
   $ cd ~/Desktop
-  $ mkdir sims_ws
+  $ mkdir -p sims_ws/src
   ```
 
 * Clone the following repositories into a source folder:
 
   ```sh
-  $ mkdir src
-  $ cd src
+  $ cd sims_ws/src
   $ git clone https://github.com/wjwwood/serial.git
   $ git clone https://github.com/mit-racecar/racecar.git
   $ git clone https://github.com/mit-racecar/racecar-simulator.git
@@ -29,8 +28,7 @@ Instructions
   ```sh
   $ cd f1_10_sim/race/scripts
   $ chmod +x *.py
-  $ cd ..
-  $ cd ..
+  $ cd ../../..
   ```
   
 * Instantiate your workspace. (You should be in 'src' folder now)
