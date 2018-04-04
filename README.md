@@ -1,7 +1,7 @@
 # Introduction:
 This repository contains information to run a racecar autonomously in a race-track/circuit. Line-tracking algorithm dictates the trajectory that the car follows by maintaining a certain distance from the left and the right wall as seen by the sensor data. For Control, PID algorithm is implimented. Simulator is made using ROS/Gazebo. The simulation has been tested on and works well in Ubuntu 14.04 with ROS Indigo installed and Gazebo version 2.2.6.
 
-![Alt Text](./intro.jpg)
+![Alt Text](./output.jpeg)
 
 How is the Car Running?
 ---
