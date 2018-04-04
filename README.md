@@ -42,14 +42,7 @@ Instructions
   $ git clone https://github.com/ros-drivers/ackermann_msgs.git
   $ git clone https://github.com/mlab-upenn/f1_10_sim.git
   ```
-  
-* Turn Python scripts into executables.
-  ```sh
-  $ cd f1_10_sim/race/scripts
-  $ chmod +x *.py
-  $ cd ../../..
-  ```
-  
+   
 * Instantiate your workspace. (You should be in 'src' folder now)
   ```sh
   $ catkin_init_workspace
