@@ -18,7 +18,7 @@ Instructions
   $ cd sims_ws/src
   $ git clone https://github.com/wjwwood/serial.git
   $ git clone https://github.com/mit-racecar/racecar.git
-  $ git clone https://github.com/mit-racecar/racecar-simulator.git
+  $ git clone https://github.com/mlab-upenn/racecar-simulator.git
   $ git clone https://github.com/mit-racecar/vesc.git
   $ git clone https://github.com/ros-drivers/ackermann_msgs.git
   $ git clone https://github.com/mlab-upenn/f1_10_sim.git
