@@ -19,7 +19,7 @@ servo_offset = 18.0*math.pi/180
 prev_error = 0.0 
 error = 0.0
 integral = 0.0
-vel_input = 25.0
+vel_input = 1.0
 
 
 def control(data):
@@ -38,7 +38,7 @@ def control(data):
 	if error!=0.0:
 		# if abs(error - prev_error)>0.5: 	
 		# 	integral = integral + error	
-		control_error = kp*error + kd*(prev_error - error)# + ki*integral
+		control_error = kp*error + kd*(error - prev_error)# + ki*integral
 		print "Control", control_error
 		# integral = integral/1.3
 		
@@ -46,22 +46,16 @@ def control(data):
 		angle = angle + control_error*np.pi/180
 		# print "Control error",control_error
 
-		control_error_vel = kp_vel*error + kd_vel*(prev_error - error)
+		control_error_vel = kp_vel*error + kd_vel*(error - prev_error)
 		# print "Control error velocity",control_error_vel
 
 		# velocity = velocity - abs(control_error_vel)/10
-		velocity = velocity - (control_error_vel)/1000
-	# else:
-		# angle = servo_offset
+		velocity = velocity + abs(control_error_vel)
+
 		
 
 	prev_error = error
 
-	# if angle<-100*np.pi/180:
-	# 	angle = -100*np.pi/180
-	# if angle>100*np.pi/180:
-	# 	angle = 100*np.pi/180
-	# angle = angle%360
 	if angle > 30*np.pi/180:
 		angle = 30*np.pi/180
 	if angle < -30*np.pi/180:
@@ -70,7 +64,7 @@ def control(data):
 
 
 	# print "Velocity",velocity
-	print "Angle",angle*180/np.pi
+	print "Angle in Degrees",angle*180/np.pi # Just for reference
 	msg = drive_param()
 
 	# velocity = 1
