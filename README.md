@@ -43,7 +43,7 @@ Instructions
   $ git clone https://github.com/mlab-upenn/f1_10_sim.git
   ```
    
-* Instantiate your workspace. (You should be in 'src' folder now)
+* Instantiate your workspace. (You should be in 'src' folder right now)
   ```sh
   $ catkin_init_workspace
   ```
@@ -59,7 +59,11 @@ Instructions
   $ echo "source ~/Desktop/sims_ws/devel/setup.bash" >> ~/.bashrc
   $ source ~/.bashrc
   ```
-
+* Install additional ROS Packages required:
+  ```sh
+  $ sudo apt-get install ros-indigo-ros-control ros-indigo-gazebo-ros-control ros-indigo-ros-controllers
+  ```
+  
 * Congratulations! Your F1Tenth simulator is now all set up. The following instructions are to boot up the simulator. Note: Run both thes commands in different terminal windows/tabs. If an address in use error pops up, type killall gzserver and try again.
   ```sh
   $ roscore
