@@ -367,9 +367,9 @@ def callback(data):
 	# print "Final Desired",final_desired_trajectory
 	# print "new code"
 	# if final_direction == 0:
-	error_right, curr_dist_right = followRight(data,2.)
-	error_left, curr_dist_left = followLeft(data,1.)
-	error_center, curr_dist_center = followCentre(data,1.)
+	error_right, curr_dist_right = followRight(data,0.05)#followRight(data,2.)
+	error_left, curr_dist_left = followRight(data,0.05)#followLeft(data,1.)
+	# error_center, curr_dist_center = followCentre(data,1.)
 	if curr_dist_right >= curr_dist_left:
 		error = error_left
 		print 'Following Left'
